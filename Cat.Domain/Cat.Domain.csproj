@@ -43,9 +43,9 @@
         <Compile Include="Services\ICatService.cs" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Cat.Data\Cat.Data.csproj">
+      <ProjectReference Include="..\Cat.Infrastructure.Data\Cat.Infrastructure.Data.csproj">
         <Project>{31aa4d94-07a6-4a2e-aecb-efb102fd2a7b}</Project>
-        <Name>Cat.Data</Name>
+        <Name>Cat.Infrastructure.Data</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

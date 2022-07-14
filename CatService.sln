@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Api", "Cat.Api\Cat.Api.csproj", "{CE712FA1-B109-43A9-96DD-AEC9D46CE80E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Application.Api", "Cat.Application.Api\Cat.Application.Api.csproj", "{CE712FA1-B109-43A9-96DD-AEC9D46CE80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Api.Tests", "Cat.Api.Tests\Cat.Api.Tests.csproj", "{0DF340A3-DF0B-409A-906E-B2DBC228AF77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Application.Api.Tests", "Cat.Application.Api.Tests\Cat.Application.Api.Tests.csproj", "{0DF340A3-DF0B-409A-906E-B2DBC228AF77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Data", "Cat.Data\Cat.Data.csproj", "{31AA4D94-07A6-4A2E-AECB-EFB102FD2A7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Infrastructure.Data", "Cat.Infrastructure.Data\Cat.Infrastructure.Data.csproj", "{31AA4D94-07A6-4A2E-AECB-EFB102FD2A7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cat.Domain", "Cat.Domain\Cat.Domain.csproj", "{4121FBBE-042A-4C9A-BEAF-F986AA478E24}"
 EndProject

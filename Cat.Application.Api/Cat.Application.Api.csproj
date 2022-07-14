@@ -14,7 +14,7 @@
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>Cat.API</RootNamespace>
-        <AssemblyName>Cat.Api</AssemblyName>
+        <AssemblyName>Cat.Application.Api</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <MvcBuildViews>false</MvcBuildViews>
         <UseIISExpress>true</UseIISExpress>
@@ -459,9 +459,9 @@
         <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Cat.Data\Cat.Data.csproj">
+      <ProjectReference Include="..\Cat.Infrastructure.Data\Cat.Infrastructure.Data.csproj">
         <Project>{31aa4d94-07a6-4a2e-aecb-efb102fd2a7b}</Project>
-        <Name>Cat.Data</Name>
+        <Name>Cat.Infrastructure.Data</Name>
       </ProjectReference>
       <ProjectReference Include="..\Cat.Domain\Cat.Domain.csproj">
         <Project>{4121fbbe-042a-4c9a-beaf-f986aa478e24}</Project>
