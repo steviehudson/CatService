@@ -7,7 +7,7 @@ namespace Cat.Data.Repositories
     public interface ICatRepository
     {
         Task<CatData> RetrieveByName(string name);
-        Task<List<CatData>> RetrieveByClassification(Classification classification);
+        Task<List<CatData>> RetrieveByClassification(ClassificationData classification);
         Task<List<CatData>> RetrieveAll();
     }
 }

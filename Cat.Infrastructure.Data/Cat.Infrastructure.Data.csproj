@@ -39,7 +39,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Models\CatData.cs" />
-        <Compile Include="Models\Classification.cs" />
+        <Compile Include="Models\ClassificationData.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Repositories\CatRepository.cs" />
         <Compile Include="Repositories\ICatRepository.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace Cat.Data.Models
 {
-    public enum Classification
+    public enum ClassificationData
     {
         Tabby,
         BlackAndWhite,
