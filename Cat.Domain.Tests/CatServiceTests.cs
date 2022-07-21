@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Cat.Data.Models;
-using Cat.Data.Repositories;
+using Cat.Domain.Model;
+using Cat.Domain.Port;
 using Cat.Domain.Services;
 using Moq;
 using NUnit.Framework;
@@ -12,12 +12,12 @@ namespace Cat.Domain.Tests
     public class CatServiceTests
     {
         private CatService _catService;
-        private Mock<ICatRepository> _catRepositoryMock;
+        private Mock<ICatAdapter> _catRepositoryMock;
 
         [SetUp]
         public void Setup()
         {
-            _catRepositoryMock = new Mock<ICatRepository>();
+            _catRepositoryMock = new Mock<ICatAdapter>();
             _catService = new CatService(_catRepositoryMock.Object);
         }
         
@@ -25,7 +25,7 @@ namespace Cat.Domain.Tests
         public async Task RetrieveByName_GivenName_ReturnsCat()
         {
             //Arrange
-            var expectedCat = new CatData("Bumble", 4, Classification.Tabby);
+            var expectedCat = new DomainCat("Bumble", 4, Classification.Tabby);
             (_catRepositoryMock).Setup(x => x.RetrieveByName("Bumble")).ReturnsAsync(expectedCat);
 
             //Act
@@ -39,10 +39,10 @@ namespace Cat.Domain.Tests
         public async Task RetrieveByClassification_GivenClassification_ReturnsAllCatsForClassification()
         {
             //Arrange
-            var expectedCats = new List<CatData>
+            var expectedCats = new List<DomainCat>
             {
-                new CatData("Bumble", 4, Classification.Tabby),
-                new CatData("Bramble", 5, Classification.Tabby)
+                new DomainCat("Bumble", 4, Classification.Tabby),
+                new DomainCat("Bramble", 5, Classification.Tabby)
             };
             _catRepositoryMock.Setup(x => x.RetrieveByClassification(Classification.Tabby)).ReturnsAsync(expectedCats);
 
@@ -57,11 +57,11 @@ namespace Cat.Domain.Tests
         public async Task RetrieveAll_ReturnsAllCats()
         {
             //Arrange
-            var expectedCats = new List<CatData>
+            var expectedCats = new List<DomainCat>
             {
-                new CatData("Bumble", 4, Classification.Tabby),
-                new CatData("Kit", 3, Classification.BlackAndWhite),
-                new CatData("Sky", 8, Classification.Tortoiseshell)
+                new DomainCat("Bumble", 4, Classification.Tabby),
+                new DomainCat("Kit", 3, Classification.BlackAndWhite),
+                new DomainCat("Sky", 8, Classification.Tortoiseshell)
             };
             _catRepositoryMock.Setup(x => x.RetrieveAll()).ReturnsAsync(expectedCats);
 

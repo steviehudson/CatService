@@ -8,10 +8,10 @@ namespace Cat.Data.Repositories
     {
         public async Task<CatData> RetrieveByName(string name)
         {
-            return new CatData(name, 4, Classification.Tabby);
+            return new CatData(name, 4, ClassificationData.Tabby);
         }
 
-        public async Task<List<CatData>> RetrieveByClassification(Classification classification)
+        public async Task<List<CatData>> RetrieveByClassification(ClassificationData classification)
         {
             return new List<CatData>
             {
@@ -24,9 +24,9 @@ namespace Cat.Data.Repositories
         {
             return new List<CatData>
             {
-                new CatData("Bumble", 4, Classification.Tabby),
-                new CatData("Kit", 3, Classification.BlackAndWhite),
-                new CatData("Sky", 8, Classification.Tortoiseshell)
+                new CatData("Bumble", 4, ClassificationData.Tabby),
+                new CatData("Kit", 3, ClassificationData.BlackAndWhite),
+                new CatData("Sky", 8, ClassificationData.Tortoiseshell)
             };
         }
     }
